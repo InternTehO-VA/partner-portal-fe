@@ -1,0 +1,49 @@
+$base-blue: #090B3A;
+$gray-1: #333333;
+$gray-2: #4F4F4F;
+
+$white: #FFFFFF;
+
+$orange: #F2994A;
+
+#app {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+a {
+    color: #313947;
+    text-decoration: none;
+    background-color: transparent;
+
+    &:hover {
+        cursor: pointer;
+        // Image
+        fill: $orange;
+        // Text
+        color: $orange;
+        text-decoration: none;
+    }
+}
+
+// Configuring vue-material colour themes
+@import "~vue-material/dist/theme/engine"; // Import the theme engine
+@include md-register-theme("va-theme", (
+  primary: $base-blue, // The primary color of your application
+  accent: $orange, // The accent or secondary color
+  text-white: $white,
+  toolbarvariant: $base-blue,
+  text-primary-on-background: $white,
+  text-primary-on-background-variant: $white,
+));
+
+@import "~vue-material/dist/theme/all"; // Apply the theme
+
+.md-toolbar {
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+}
+
