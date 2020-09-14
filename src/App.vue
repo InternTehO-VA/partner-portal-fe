@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :style="backgroundStyle">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <TopBar />
@@ -12,6 +12,11 @@ import TopBar from "@/components/TopBar";
 export default {
   components: {
     TopBar
-  }
+  },
+  data: () => ({
+    backgroundStyle: {
+      backgroundImage: `url(${require('@/assets/mainBG.png')})`
+    }
+  })
 }
 </script>

@@ -4,10 +4,10 @@
       <img alt="Logo" class="logo-item" src="../assets/VAPPPPLogo.png">
     </div>
     <div class="topbar-actions">
-      <md-button>Home</md-button>
-      <md-button>Resources</md-button>
-      <md-button>VATracker</md-button>
-      <md-button>Support</md-button>
+      <md-button :class="isHomeActive ? 'md-accent active-class': 'md-default'">Home</md-button>
+      <md-button :class="isResourcesActive ? 'md-accent active-class': 'md-default'">Resources</md-button>
+      <md-button :class="isVATrackerActive ? 'md-accent active-class': 'md-default'">VATracker</md-button>
+      <md-button :class="isSupportActive ? 'md-accent active-class': 'md-default'">Support</md-button>
       <md-button class="md-icon-button md-dense">
         <md-icon>person</md-icon>
       </md-button>
@@ -18,7 +18,21 @@
 <script>
 
 export default {
-  name: "TopBar"
+  name: "TopBar",
+  computed: {
+    isHomeActive () {
+      return this.$route.name?.includes('home')
+    },
+    isResourcesActive () {
+      return this.$route.name?.includes('resources')
+    },
+    isVATrackerActive () {
+      return this.$route.name?.includes('vatracker')
+    },
+    isSupportActive () {
+      return this.$route.name?.includes('support')
+    }
+  }
 }
 </script>
 
@@ -26,5 +40,9 @@ export default {
 .topbar-actions {
   display: flex;
   align-items: center;
+}
+
+.active-class {
+  font-weight: bolder;
 }
 </style>
