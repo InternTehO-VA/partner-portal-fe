@@ -3,27 +3,28 @@
     <div class="md-title" style="flex: 1">
       <img alt="Logo" class="logo-item" src="../assets/VAPPPPLogo.png">
     </div>
-    <md-button>Home</md-button>
-    <md-button>Resources</md-button>
-    <md-button>VATracker</md-button>
-    <md-button>Support</md-button>
-    <md-button class="md-icon-button md-dense">
-      <md-icon>person</md-icon>
-    </md-button>
+    <div class="topbar-actions">
+      <md-button>Home</md-button>
+      <md-button>Resources</md-button>
+      <md-button>VATracker</md-button>
+      <md-button>Support</md-button>
+      <md-button class="md-icon-button md-dense">
+        <md-icon>person</md-icon>
+      </md-button>
+    </div>
   </md-toolbar>
 </template>
 
 <script>
+
 export default {
-  name: "TopBar",
-  props: {
-    isLoggedIn: {
-      type: Boolean,
-      default: false
-    }
-  }
+  name: "TopBar"
 }
 </script>
 
 <style scoped>
+.topbar-actions {
+  display: flex;
+  align-items: center;
+}
 </style>

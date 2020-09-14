@@ -12,7 +12,14 @@ $orange: #F2994A;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100%;
 }
+
+body {
+    background: #f9f9f9;
+    height: 100%;
+}
+
 
 a {
     color: #313947;
