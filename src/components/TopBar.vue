@@ -8,9 +8,26 @@
       <md-button :class="isResourcesActive ? 'md-accent active-class': 'md-default'">Resources</md-button>
       <md-button :class="isVATrackerActive ? 'md-accent active-class': 'md-default'">VATracker</md-button>
       <md-button :class="isSupportActive ? 'md-accent active-class': 'md-default'">Support</md-button>
-      <md-button class="md-icon-button md-dense">
-        <md-icon>person</md-icon>
-      </md-button>
+      <md-menu md-align-trigger md-size="medium" md-direction="bottom-end">
+        <md-button class="md-icon-button md-dense" md-menu-trigger>
+          <md-icon>person</md-icon>
+        </md-button>
+        <md-menu-content>
+          <md-button class="md-dense">
+            <md-menu-item>
+              <md-icon>person</md-icon>
+              <span>My Profile</span>
+            </md-menu-item>
+          </md-button>
+
+          <md-button class="md-dense">
+            <md-menu-item>
+              <md-icon>exit_to_app</md-icon>
+              <span>Logout</span>
+            </md-menu-item>
+          </md-button>
+        </md-menu-content>
+      </md-menu>
     </div>
   </md-toolbar>
 </template>
