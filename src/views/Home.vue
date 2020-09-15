@@ -3,7 +3,15 @@
     <div class="content">
       <div class="announcements">
         <h1 style="text-align: left">Announcements</h1>
-        <carousel :per-page="1" :navigate-to="0" :mouse-drag="false">
+        <carousel ref="vaCarousel"
+          :per-page="1" 
+          :navigate-to="0" 
+          :mouse-drag="false" 
+          :autoplay="true"
+          :loop="true"
+          paginationActiveColor="#F2994A"
+          paginationColor="#FFFFFF"
+        >
           <slide>
             <img src="../assets/Banner_Item_1.png" alt="Banner Item 1"/>
           </slide>
@@ -25,7 +33,16 @@
 <script>
 
 export default {
-  name: 'Home'
+  name: 'Home',
+  async mounted () {
+    const dotContainerElement = await document.getElementsByClassName('VueCarousel-dot-container')[0]
+    dotContainerElement.removeAttribute('style')
+
+    const dotElements = await document.getElementsByClassName('VueCarousel-dot')
+    for (const dotElet of dotElements) {
+      dotElet.style.marginTop = '0px'
+    }
+  }
 }
 </script>
 
@@ -39,5 +56,8 @@ export default {
 }
 .profile {
   width: 40%
+}
+.VueCarousel-dot-container {
+  margin-top: -20px;
 }
 </style>
