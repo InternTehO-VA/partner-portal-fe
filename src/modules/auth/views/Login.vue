@@ -8,7 +8,7 @@
       <md-card-header>
         <div class="md-title login-title"><strong>Login</strong></div>
       </md-card-header>
-      <form @submit.prevent="loginSubmit()">
+      <form @submit.prevent="loginSubmit">
         <md-card-content style="text-align: left">
           <md-field md-clearable>
             <label>Email</label>

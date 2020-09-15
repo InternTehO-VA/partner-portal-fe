@@ -3,7 +3,7 @@
     <div class="md-title" style="flex: 1">
       <img alt="Logo" class="logo-item" src="../assets/VAPPPPLogo.png">
     </div>
-    <div class="topbar-actions">
+    <div class="topbar-actions" v-if="!isLogin">
       <md-button :class="isHomeActive ? 'md-accent active-class': 'md-default'">Home</md-button>
       <md-button :class="isResourcesActive ? 'md-accent active-class': 'md-default'">Resources</md-button>
       <md-button :class="isVATrackerActive ? 'md-accent active-class': 'md-default'">VATracker</md-button>
@@ -48,6 +48,9 @@ export default {
     },
     isSupportActive () {
       return this.$route.name?.includes('support')
+    },
+    isLogin () {
+      return this.$route.name?.includes('login')
     }
   }
 }
