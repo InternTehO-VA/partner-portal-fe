@@ -1,5 +1,5 @@
 <template>
-  <div class="login" :style="backgroundStyle">
+  <div class="login md-scrollbar" :style="backgroundStyle">
     <md-card md-theme="va-theme" class="login-box">
       <md-card-media>
         <img src="../../../assets/VAPPPPLogo_bigger.png" alt="Logo">
