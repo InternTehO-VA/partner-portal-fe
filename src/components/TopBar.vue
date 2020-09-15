@@ -20,7 +20,7 @@
             </md-menu-item>
           </md-button>
 
-          <md-button class="md-dense">
+          <md-button class="md-dense" :to="{ name: 'login'}">
             <md-menu-item>
               <md-icon>exit_to_app</md-icon>
               <span>Logout</span>

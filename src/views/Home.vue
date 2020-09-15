@@ -10,7 +10,7 @@
           :mouse-drag="false" 
           :autoplay="true"
           :loop="true"
-          autoplayTimeout="4000"
+          :autoplayTimeout=4000
           paginationActiveColor="#F2994A"
           paginationColor="#FFFFFF"
         >
@@ -34,13 +34,14 @@
             <img src="../assets/partnerLogo.png" alt="People">
           </md-card-media>
         </md-card-header>
+
         <md-avatar class="profile-card-avatar md-large md-accent md-avatar-icon">
           <img src="../assets/profilePic.png" alt="Avatar">
         </md-avatar>
-        <div class="md-title">Title goes here</div>
-        <div class="md-subhead">Subtitle here</div>
 
         <md-card-content>
+          <div class="md-title"><strong>Welcome, Samal</strong></div>
+          <div class="md-subhead">Client Executive</div>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea nostrum.
         </md-card-content>
 
