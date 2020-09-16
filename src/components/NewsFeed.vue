@@ -24,7 +24,6 @@
             <table>
                 <tr style="padding: 0px;">
                     <td><img class="linkedinLogo" src="../assets/linkedinIcon.png" alt="linked in"/></td>
-                    &nbsp;
                     <td>
                         <a href="https://www.linkedin.com/company/vainsight/" target="_blank"><h2>VA Insight Software</h2></a>
                         <md-tooltip md-direction="top" class="tooltip-custom">View LinkedIn Profile</md-tooltip>

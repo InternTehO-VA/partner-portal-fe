@@ -40,7 +40,7 @@
         </md-card-content>
 
         <md-card-actions>
-          <md-button>Edit Profile</md-button>
+          <md-button class="md-raised md-accent">Edit Profile</md-button>
         </md-card-actions>
       </md-card>
     </div>

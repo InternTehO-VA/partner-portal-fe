@@ -47,6 +47,7 @@ a {
   background: $base-blue,
   text-primary-on-background: $white,
   text-primary-on-background-variant: $white,
+  text-primary-on-accent: $white
 ));
 
 @import "~vue-material/dist/theme/all"; // Apply the theme
