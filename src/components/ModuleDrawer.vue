@@ -46,7 +46,7 @@ export default {
 
 <style>
 .module-drawer {
-    width: 16%;
+    width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, 0.5) !important;
     box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25) !important;

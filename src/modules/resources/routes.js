@@ -1,12 +1,30 @@
 const routes = [
     {
-        path: '/resources/overview',
+        path: '/resources',
         name: 'resources',
-        component: () => import(/* webpackChunkName: "auth" */ './views/Overview'),
+        components: {
+            toolbarRouter: () => import(/* webpackChunkName: "resources" */ './views/Index')
+        },
         meta: {
-            title: 'Overview',
+            title: 'Resources',
             public: false
-        }
+        },
+        children: [
+            {
+                path:'/overview',
+                name: 'overview',
+                components: {
+                    menuRouter: () => import('./views/resource/Overview')
+                }
+            },
+            {
+                path: '/sales-enablement',
+                name: 'sales-enablement',
+                components: {
+                    menuRouter: () => import('./views/resource/SalesEnablement')
+                }
+            }
+        ]
     }
 ]
 

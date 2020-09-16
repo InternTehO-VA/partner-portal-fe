@@ -93,6 +93,9 @@ export default {
   width: 55%;
   float: left;
 }
+.news-feed {
+  padding-top: 2em;
+}
 .profile {
   width: 45%;
   float: right;
