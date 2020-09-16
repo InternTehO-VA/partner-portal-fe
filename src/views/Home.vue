@@ -93,9 +93,6 @@ export default {
   width: 55%;
   float: left;
 }
-.announcements-carousel {
-  width: 90%;
-}
 .profile {
   width: 45%;
   float: right;

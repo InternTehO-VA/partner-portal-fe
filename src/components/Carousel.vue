@@ -23,3 +23,9 @@
 export default {
 }
 </script>
+
+<style scoped>
+.announcements-carousel {
+  width: 90%;
+}
+</style>

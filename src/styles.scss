@@ -13,10 +13,11 @@ $orange: #F2994A;
   text-align: center;
   color: #2c3e50;
   height: 100%;
+  background: $base-blue;
 }
 
 body {
-    background: #f9f9f9;
+    background: $base-blue;
     height: 100%;
 }
 
