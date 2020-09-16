@@ -13,13 +13,6 @@
           <md-icon>person</md-icon>
         </md-button>
         <md-menu-content>
-          <md-button class="md-dense">
-            <md-menu-item>
-              <md-icon>person</md-icon>
-              <span>My Profile</span>
-            </md-menu-item>
-          </md-button>
-
           <md-button class="md-dense" :to="{ name: 'login'}">
             <md-menu-item>
               <md-icon>exit_to_app</md-icon>

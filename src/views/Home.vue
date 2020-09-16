@@ -3,27 +3,11 @@
     <div class="content">
       <div class="announcements">
         <h1 style="text-align: left">Announcements</h1>
-        <carousel
-          class="announcements-carousel"
-          :per-page="1" 
-          :navigate-to="0" 
-          :mouse-drag="false" 
-          :autoplay="true"
-          :loop="true"
-          :autoplayTimeout=4000
-          paginationActiveColor="#F2994A"
-          paginationColor="#FFFFFF"
-        >
-          <slide>
-            <img src="../assets/Banner_Item_1.png" alt="Banner Item 1"/>
-          </slide>
-          <slide>
-            <img src="../assets/Banner_Item_2.png" alt="Banner Item 2"/>
-          </slide>
-        </carousel>
+        <Carousel />
       </div>
       <div class="news-feed">
         <h1 style="text-align: left">News Feed</h1>
+        <NewsFeed />
       </div>
     </div>
     <div class="profile">
@@ -36,18 +20,27 @@
         </md-card-header>
 
         <md-avatar class="profile-card-avatar md-large md-accent md-avatar-icon">
-          <img src="../assets/profilePic.png" alt="Avatar">
+          <img src="../assets/profilePic.png" alt="Avatar" />
         </md-avatar>
 
-        <md-card-content>
-          <div class="md-title"><strong>Welcome, Samal</strong></div>
-          <div class="md-subhead">Client Executive</div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea nostrum.
+        <md-card-content class="profile-card-greeting">
+          <h1 style="margin-bottom: 0.3em;"><strong>Welcome, Samal</strong></h1>
+          <div class="md-title">Client Executive</div>
+        </md-card-content>
+
+        <md-card-content class="profile-card-current-tasks">
+          <h1><strong>Current Tasks</strong></h1>
+          <div v-for="task in tasks" :key="task.taskId" class="task-wrapper">
+            <Task :task=task />
+          </div>
+        </md-card-content>
+
+        <md-card-content class="profile-card-quick-links">
+          <h1><strong>Quick Links</strong></h1>
         </md-card-content>
 
         <md-card-actions>
-          <md-button>Action</md-button>
-          <md-button>Action</md-button>
+          <md-button>Edit Profile</md-button>
         </md-card-actions>
       </md-card>
     </div>
@@ -55,9 +48,20 @@
 </template>
 
 <script>
+import Carousel from '../components/Carousel'
+import NewsFeed from '../components/NewsFeed'
+import Task from '../components/Task'
 
 export default {
   name: 'Home',
+  components: {
+    Carousel,
+    NewsFeed,
+    Task
+  },
+  data: () => ({
+    tasks: () => ({})
+  }),
   async mounted () {
     const dotContainerElement = await document.getElementsByClassName('VueCarousel-dot-container')[0]
     dotContainerElement.removeAttribute('style')
@@ -65,6 +69,16 @@ export default {
     const dotElements = await document.getElementsByClassName('VueCarousel-dot')
     for (const dotElet of dotElements) {
       dotElet.style.marginTop = '0px'
+    }
+
+    await this.populateTasks()
+  },
+  methods: {
+    populateTasks () {
+      this.tasks = [
+        { taskId: 1, classification: 'Resource', item: 'Sales Enablement', itemNumber: 3, progress: 60 },
+        { taskId: 2, classification: 'VATracker', item: 'Quizsets', itemNumber: 2, progress: 38 }
+      ]
     }
   }
 }
@@ -106,6 +120,16 @@ export default {
 .profile-card-header-partner-logo {
   margin-left:auto; 
   margin-right:0px;
+}
+.profile-card-greeting {
+  color: #090B3A;
+}
+.profile-card-current-tasks, .profile-card-quick-links {
+  text-align: left;
+  padding: 1em 2rem;
+}
+.task-wrapper {
+  padding: 1em 0;
 }
 .VueCarousel-dot-container {
   margin-top: -20px;
