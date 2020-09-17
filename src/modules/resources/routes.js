@@ -2,27 +2,21 @@ const routes = [
     {
         path: '/resources',
         name: 'resources',
-        components: {
-            toolbarRouter: () => import(/* webpackChunkName: "resources" */ './views/Index')
-        },
+        component: () => import(/* webpackChunkName: "resources" */ './views/Index'),
         meta: {
             title: 'Resources',
             public: false
         },
         children: [
             {
-                path:'/overview',
+                path:'overview',
                 name: 'overview',
-                components: {
-                    menuRouter: () => import('./views/resource/Overview')
-                }
+                component: () => import('./views/resource/Overview')
             },
             {
-                path: '/sales-enablement',
+                path: 'sales-enablement',
                 name: 'sales-enablement',
-                components: {
-                    menuRouter: () => import('./views/resource/SalesEnablement')
-                }
+                components: () => import('./views/resource/SalesEnablement')
             }
         ]
     }

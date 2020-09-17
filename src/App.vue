@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <TopBar class="topbar"/>
-    <router-view :style="backgroundStyle" class="main-content" name="toolbarRouter" :key="$route.fullPath"/>
+    <router-view :style="backgroundStyle" class="main-content" :key="$route.fullPath"/>
   </div>
 </template>
 

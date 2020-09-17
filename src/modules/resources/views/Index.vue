@@ -1,7 +1,7 @@
 <template>
     <div class="overview md-scrollbar">
         <ModuleDrawer class="drawer" :drawerItems="drawerItems"/>
-        <router-view class="router-view-content" name="menuRouter"/>
+        <router-view class="router-view-content"/>
     </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
     },
     data: () => ({
         drawerItems: [
-            { icon: 'home', name: 'Overview', routeName: 'resources'},
+            { icon: 'home', name: 'Overview', routeName: 'overview'},
             { icon: 'record_voice_over', name: 'Sales Enablement', routeName: 'sales-enablement'},
             { icon: 'screen_share', name: 'Technical Enablement', routeName: 'technical-enablement'},
             { icon: 'book', name: 'Guides', routeName: 'guides'},

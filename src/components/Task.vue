@@ -6,8 +6,7 @@
         </md-card-header>
 
         <md-card-content>
-          <md-progress-bar class="md-accent" md-mode="determinate" :md-value="task.progress">
-          </md-progress-bar>
+          <md-progress-bar class="md-accent" md-mode="determinate" :md-value="task.progress" />
           <md-tooltip md-direction="bottom" class="tooltip-custom">{{task.progress}}% Completeness</md-tooltip>
         </md-card-content>
       </md-ripple>
