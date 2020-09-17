@@ -37,6 +37,12 @@
 
         <md-card-content class="profile-card-quick-links">
           <h1><strong>Quick Links</strong></h1>
+          <!-- stand in -->
+          <div>
+            <md-card md-with-hover class="quicklinks-card">
+              insert a bunch of nav links here
+            </md-card>
+          </div>
         </md-card-content>
 
         <md-card-actions>
@@ -106,6 +112,7 @@ export default {
   box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 }
+
 .profile-card-header {
   background: #F2994A;
   border-top-left-radius: 10px;
@@ -132,6 +139,12 @@ export default {
 .task-wrapper {
   padding: 1em 0;
 }
+
+.quicklinks-card {
+  border-radius: 10px;
+  padding: 1em 2rem;
+}
+
 .VueCarousel-dot-container {
   margin-top: -20px;
 }
