@@ -7,7 +7,7 @@
             </md-list-item>
             <md-list-item 
                 v-for="item in drawerItems" 
-                :key="item.name" 
+                :key="item.name"
                 :class="isActiveMenuItem(item.routeName) ? 'drawer-item-active' : 'drawer-item'"
                 :to="`/resources/${item.routeName}`"
             >

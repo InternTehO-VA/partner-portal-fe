@@ -5,7 +5,7 @@
     </div>
     <div class="topbar-actions" v-if="!isLogin">
       <md-button :to="{ name: 'home'}" :class="isHomeActive ? 'md-accent active-class': 'md-default'">Home</md-button>
-      <md-button :to="{ path: 'resources/overview'}" :class="isResourcesActive ? 'md-accent active-class': 'md-default'">Resources</md-button>
+      <md-button :to="{ name: 'overview'}" :class="isResourcesActive ? 'md-accent active-class': 'md-default'">Resources</md-button>
       <md-button :class="isVATrackerActive ? 'md-accent active-class': 'md-default'">VATracker</md-button>
       <md-button :class="isSupportActive ? 'md-accent active-class': 'md-default'">Support</md-button>
       <md-menu md-align-trigger md-size="medium" md-direction="bottom-end">

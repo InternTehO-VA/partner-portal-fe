@@ -76,8 +76,9 @@ export default {
   methods: {
     populateTasks () {
       this.tasks = [
-        { taskId: 1, classification: 'Resource', item: 'Sales Enablement', itemNumber: 3, progress: 60 },
-        { taskId: 2, classification: 'VATracker', item: 'Quizsets', itemNumber: 2, progress: 38 }
+        { taskId: 1, classification: 'Resource', item: 'Sales Enablement', itemNumber: 3, completion: 60 },
+        { taskId: 2, classification: 'Resource', item: 'Technical Enablement', itemNumber: 2, completion: 80 },
+        { taskId: 3, classification: 'VATracker', item: 'Quizsets', itemNumber: 2, completion: 38 }
       ]
     }
   }
