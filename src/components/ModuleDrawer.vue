@@ -9,7 +9,7 @@
                 v-for="item in drawerItems" 
                 :key="item.name"
                 :class="isActiveMenuItem(item.routeName) ? 'drawer-item-active' : 'drawer-item'"
-                :to="`/resources/${item.routeName}`"
+                :to="{ name: item.routeName }"
             >
                 <md-icon>{{item.icon}}</md-icon>
                 <span class="md-list-item-text">{{item.name}}</span>

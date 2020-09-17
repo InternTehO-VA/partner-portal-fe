@@ -9,6 +9,10 @@ const routes = [
         },
         children: [
             {
+                path: '/',
+                redirect: 'overview'
+            },
+            {
                 path:'overview',
                 name: 'overview',
                 component: () => import('./views/resource/Overview')
@@ -16,27 +20,27 @@ const routes = [
             {
                 path: 'sales-enablement',
                 name: 'sales-enablement',
-                components: () => import('./views/resource/SalesEnablement')
+                component: () => import('./views/resource/SalesEnablement')
             },
             {
                 path: 'technical-enablement',
                 name: 'technical-enablement',
-                components: () => ''
+                component: () => ''
             },
             {
                 path: 'guides',
                 name: 'guides',
-                components: () => ''
+                component: () => ''
             },
             {
                 path: 'slide-decks',
                 name: 'slide-decks',
-                components: () => ''
+                component: () => ''
             },
             {
                 path: 'marketing-materials',
                 name: 'marketing-materials',
-                components: () => ''
+                component: () => ''
             },
         ]
     }

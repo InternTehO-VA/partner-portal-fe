@@ -1,7 +1,7 @@
 <template>
     <div class="overview md-scrollbar">
         <ModuleDrawer class="drawer" :drawerItems="drawerItems"/>
-        <router-view class="router-view-content"/>
+        <router-view class="router-view-content" :key="$route.fullPath"/>
     </div>
 </template>
 

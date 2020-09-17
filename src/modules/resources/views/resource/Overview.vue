@@ -1,11 +1,11 @@
 <template>
   <div class="overview md-scrollbar">
     <div class="overview-content">
-      <h1 style="text-align: left">Overview</h1>
+      <h1 style="text-align: left;">Overview</h1>
       <div class="md-layout md-gutter">
         <div v-for="resource in resources" :key="resource.resourceId" 
           class="md-layout-item md-size-40">
-          <OverviewCard :resource="resource"/>
+          <OverviewCard :resource="resource" />
         </div>
       </div>
     </div>
@@ -23,7 +23,8 @@ export default {
   data: () => ({
     resources: [
       { resourceId: 1,
-        resourceName: 'Sales Enablement', 
+        resourceName: 'Sales Enablement',
+        resourceRouteName: 'sales-enablement', 
         modules: [
           { moduleNumber: 1, moduleName: 'Product Introduction', completion: 100 },
           { moduleNumber: 2, moduleName: 'Browsing', completion: 100 },
@@ -34,7 +35,8 @@ export default {
         ] 
       },
       { resourceId: 2, 
-        resourceName: 'Technical Enablement', 
+        resourceName: 'Technical Enablement',
+        resoureceRouteName: 'technical-enablement', 
         modules: [
           { moduleNumber: 1, moduleName: 'Insight Deployment', completion: 100 },
           { moduleNumber: 2, moduleName: 'Insight Wizard Setup', completion: 80 },
