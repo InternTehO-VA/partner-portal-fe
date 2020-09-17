@@ -17,7 +17,27 @@ const routes = [
                 path: 'sales-enablement',
                 name: 'sales-enablement',
                 components: () => import('./views/resource/SalesEnablement')
-            }
+            },
+            {
+                path: 'technical-enablement',
+                name: 'technical-enablement',
+                components: () => ''
+            },
+            {
+                path: 'guides',
+                name: 'guides',
+                components: () => ''
+            },
+            {
+                path: 'slide-decks',
+                name: 'slide-decks',
+                components: () => ''
+            },
+            {
+                path: 'marketing-materials',
+                name: 'marketing-materials',
+                components: () => ''
+            },
         ]
     }
 ]

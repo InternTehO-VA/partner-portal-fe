@@ -24,8 +24,8 @@
         </md-avatar>
 
         <md-card-content class="profile-card-greeting">
-          <h1 style="margin-bottom: 0.3em;"><strong>Welcome, Samal</strong></h1>
-          <div class="md-title">Client Executive</div>
+          <h1 style="margin-bottom: 0.3em;"><strong>Welcome, Samal!</strong></h1>
+          <div class="md-title"><i>Client Executive</i></div>
         </md-card-content>
 
         <md-card-content class="profile-card-current-tasks">

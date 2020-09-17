@@ -5,7 +5,7 @@
     </div>
     <div class="topbar-actions" v-if="!isLogin">
       <md-button :to="{ name: 'home'}" :class="isHomeActive ? 'md-accent active-class': 'md-default'">Home</md-button>
-      <md-button :to="{ name: 'resources'}" :class="isResourcesActive ? 'md-accent active-class': 'md-default'">Resources</md-button>
+      <md-button :to="{ path: 'resources/overview'}" :class="isResourcesActive ? 'md-accent active-class': 'md-default'">Resources</md-button>
       <md-button :class="isVATrackerActive ? 'md-accent active-class': 'md-default'">VATracker</md-button>
       <md-button :class="isSupportActive ? 'md-accent active-class': 'md-default'">Support</md-button>
       <md-menu md-align-trigger md-size="medium" md-direction="bottom-end">
@@ -34,16 +34,16 @@ export default {
       return this.$route.name?.includes('home')
     },
     isResourcesActive () {
-      return this.$route.name?.includes('resources')
+      return this.$route.path?.includes('resources')
     },
     isVATrackerActive () {
-      return this.$route.name?.includes('vatracker')
+      return this.$route.path?.includes('vatracker')
     },
     isSupportActive () {
-      return this.$route.name?.includes('support')
+      return this.$route.path?.includes('support')
     },
     isLogin () {
-      return this.$route.name?.includes('login')
+      return this.$route.path?.includes('login')
     }
   }
 }

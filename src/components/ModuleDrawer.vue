@@ -10,7 +10,6 @@
                 :key="item.name" 
                 :class="isActiveMenuItem(item.routeName) ? 'drawer-item-active' : 'drawer-item'"
                 :to="`/resources/${item.routeName}`"
-                @click="navigate()"
             >
                 <md-icon>{{item.icon}}</md-icon>
                 <span class="md-list-item-text">{{item.name}}</span>
@@ -29,7 +28,7 @@ export default {
         }
     },
     data: () => ({
-        menuShrink: false 
+        menuShrink: true 
     }),
     methods: {
         toggleMenu () {
@@ -37,9 +36,6 @@ export default {
         },
         isActiveMenuItem (itemRouteName) {
             return this.$route.name.includes(itemRouteName)
-        },
-        navigate () {
-            return
         }
     }
 }
